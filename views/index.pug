@@ -1,0 +1,58 @@
+html
+	head
+		title Auto Poster
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css", rel="stylesheet")
+		link(href="css/style.css", rel="stylesheet")
+	body.container
+		.columns
+			.column.is-4.is-offset-4.has-text-centered
+				h1.title.is-3 Auto Poster
+				
+				if logged_in
+					.columns#full-list
+						.column.is-6
+							h3.title.is-5 Facebook IDs
+							ul.has-text-left#fb-listing
+								li(data-key="1696902820547225") Acworth
+								//- li Coder Warehouse: 1594816820775537
+								//- li Atlanta: 787022708013973
+						.column.is-6
+							h3.title.is-5 Gitter Groups
+							ul.has-text-left#gitter-listing
+								li(data-key="FreeCodeCamp/HelpFrontEnd") HelpFrontEnd 
+								li(data-key="vuejs/vue") Vue
+					hr
+
+					.columns
+						.column.is-6
+							h4.title.is-5 Facebook Groups
+							ul.has-text-left#facebook-groups
+
+						.column.is-6
+							h4.title.is-5 Gitter Channels
+							ul.has-text-left#gitter-channels
+
+					.columns
+						.field.has-addons.column.is-6
+							p.control
+								input.input(type="text", placeholder="Add Facebook Group", id="group")
+							p.control
+								button.button#add-group Add
+						.field.has-addons.column.is-6
+							p.control
+								input.input(type="text", placeholder="Add Gitter Channel", id="channel")
+							p.control
+								button.button#add-channel Add
+
+					form
+						.field
+							input.input(type="text", placeholder="Link", id="link")
+						.field
+							textarea.textarea(placeholder="Message Text", id="message")
+						.field
+							button.button.is-primary(type="submit", id="submit") Submit
+				else
+					a.button.is-primary(href="/auth") Log In
+	
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.js")
+		script(src="js/app.js")

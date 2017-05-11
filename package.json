@@ -1,0 +1,25 @@
+{
+  "name": "auto_poster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js --exec babel-node"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "errorhandler": "^1.5.0",
+    "express": "^4.15.2",
+    "fbgraph": "^1.4.1",
+    "method-override": "^2.3.8",
+    "node-gitter": "^2.0.5",
+    "pug": "^2.0.0-rc.1",
+    "socket.io": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}

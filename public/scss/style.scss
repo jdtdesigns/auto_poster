@@ -1,0 +1,32 @@
+body {
+	margin: 0;
+	padding: 80px 0 0;
+	height: 100%;
+}
+
+#full-list {
+	ul {
+		list-style: square;
+		padding-left: 25px;
+	}	
+}
+
+ul {
+	li {
+		padding-left: 5px;
+		cursor: pointer;
+		&:hover {
+			background: #fafafa;
+		}
+	}
+}
+
+form {
+	width: 100%;
+	input, textarea {
+		width: 100%;		
+	}
+	textarea {
+		min-height: 220px;		
+	}
+}
